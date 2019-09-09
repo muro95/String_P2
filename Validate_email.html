@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate_Email</title>
+</head>
+<body>
+
+</body>
+<script>
+    regexp = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+\.[A-Za-z0-9]+$/;
+
+    function checkEmail(str) {
+
+        return regexp.test(str);
+    }
+    let arr=['a@gmail.com',
+        'ab@yahoo.com',
+        'abc@hotmail.com',
+        '@gmail.com',
+        'ab@gmail',
+        '@#abc@gmail.com'];
+    for (let w of arr){
+        if (checkEmail(w)){
+            console.log("'" + w + "'" +"la 1 email hop le!!");
+        }else {
+            console.log("'" + w + "'" +'la 1 email khong hop le!!');
+        }
+    }
+
+</script>
+</html>
