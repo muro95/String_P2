@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>p1</title>
+</head>
+<body>
+
+</body>
+<script>
+    regexp = /^(\d{2})*[/](\d{2})*[/](\d{4})*$/;
+
+    function checkDate(str) {
+        return regexp.test(str);
+    }
+    let str =["01/01/2001",
+        'as/12/as12'];
+    for (let w of str){
+        if (checkDate(w)){
+            console.log("'" + w + "'" + "is the right number");
+        }else {
+            console.log("'" + w + "'" + "is not the right number");
+        }
+    }
+</script>
+</html>

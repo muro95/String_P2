@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>p2</title>
+</head>
+<body>
+
+</body>
+    <script>
+        let str = prompt("Enter your info: ");
+        let checkword = /[a-zA-Z]/g;
+        if (checkword.test(str)){
+            let word_matches = str.length;
+            alert("There are " + word_matches + " in the info");
+
+        }else {
+            alert("Error!");
+        }
+    </script>
+</html>

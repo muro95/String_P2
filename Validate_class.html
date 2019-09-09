@@ -1,0 +1,28 @@
+<!DOCTYPE html>$/
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate_class</title>
+</head>
+<body>
+
+</body>
+<script>
+    regexp = /^[CAP]\d{4}[GHIKLM]$/;
+
+    function checkClass(str) {
+        return regexp.test(str);
+    }
+    let arr = ['C0318G',
+    'M0318G',
+    'P0323A'];
+
+    for (let w of arr){
+        if (checkClass(w)){
+            console.log("'" + w + "'" + "is the right name");
+        }else {
+            console.log("'" + w + "'" + "is not the right name");
+        }
+    }
+</script>
+</html>

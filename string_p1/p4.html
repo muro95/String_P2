@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>p4</title>
+</head>
+<body>
+
+</body>
+    <script>
+        let str = prompt("Enter your password: ");
+        regexp = /^[A-Z]{4}[.][1][2][3][4]$/;
+        function check(str) {
+            return regexp.test(str);
+        }
+        let tries = 0;
+        while (tries < 5){
+            if (check(str)){
+                alert("Welcome user!");
+                break;
+            }else {
+                alert("Wrong password! Try again");
+                let str = prompt("Enter your password: ");
+                tries++;
+            }
+        }
+
+    </script>
+</html>

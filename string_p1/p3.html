@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>P3</title>
+</head>
+<body>
+
+</body>
+    <script>
+        let str = prompt('Enter your info: ', '');
+        if ((/[aeiou]/gi).test(str)){
+            let checkNum = str.match(/[aeiou]/gi).length;
+            alert('There are ' + checkNum + ' ');
+        }
+        let checkPhuam = str.match(/[bcdfghjklmnpqrstvwxyz]/gi).length;
+        alert('có '+checkPhuam+' phụ âm trong chuỗi đã nhập');
+    </script>
+</html>
