@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate_</title>
+</head>
+<body>
+
+</body>
+    <script>
+        regexp = /^[_a-z0-9]{6,}$/;
+
+        function checkAccount(str){
+            return regexp.test(str);
+        }
+        let arr =['123abc_',
+        '_abc123',
+        '_____',
+        '123456',
+        'abcdefg',
+        '.@',
+        '12345',
+        '1234_',
+        'abcde'];
+
+        for (let w of arr){
+            if (checkAccount(w)){
+                console.log("'" + w + "'" +"la 1 tai khoan hop le!!");
+            }else {
+                console.log("'" + w + "'" +'la 1 tai khoan khong hop le!!');
+            }
+        }
+
+
+
+    </script>
+</html>
