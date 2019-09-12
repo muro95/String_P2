@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String</title>
+</head>
+<body>
+
+</body>
+    <script>
+        let str = "Tôi yêu ngôn ngữ lập trình Javascript";
+        let count = 0;
+        for (let i = 0; i < str.length; i ++){
+            if (str.slice(i, i +1) === 'a'){
+                count ++
+            }
+        }
+
+        console.log(count);
+
+        let start = 0, dem = 0;
+        let arr = [];
+        for (let i = 0; i < str.length; i ++){
+            if(str.slice(i, i +1) === ' '){
+                arr[dem] = str.slice(start, i);
+                start = i + 1;
+                dem++;
+                for (let j = start; j < str.length; j ++ ){
+                    if (str.slice(j, j +1) !== " ") arr.push(str.slice(start, str.length));
+                    break;
+                }
+            }
+        }
+
+        console.log(++dem);
+        console.log(str.replace("Javascript", "Typescript"));
+    </script>
+</html>
